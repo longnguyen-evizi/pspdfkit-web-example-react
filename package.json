@@ -27,14 +27,26 @@
   "scripts": {
     "verify-installation": "node scripts/verify-install.js && node scripts/copy-pspdfkit-files.js",
     "prestart": "npm run verify-installation",
-    "start": "cross-env REACT_APP_PSPDFKIT_LICENSE_KEY='YOUR_LICENSE_KEY_GOES_HERE' react-scripts start",
+    "start": "cross-env REACT_APP_PSPDFKIT_LICENSE_KEY='gnrWLOvtLySXvx8KoQ12JF8MTH1-EuNewyCF2o6b9G5CfDhRUalgUOtHruCi1W2vd3tlz20xjsXHST7xEcfKT43N9MUqZ1hBpeKJ6fOh4qILTiX0GZXBiQYkfLHjH7fuxBxc1_8tzouCXNnUPiKSccOth7kHwQ1rKNoQHl_7pcyDT71JNUl_6MTO2U3QoC8ZbTEuBix65pxcj8CfsZcYwy7PCOdHWlM5qtCh6O40lz351K5UukeDYTUMkmWn_LerPF82L3mGbpTGi7_XqmxTB2ey8N9TK-RUCu6bfoBsEqwHyAHo2I98jHrq1Pn4pvxRZpvXfuYib0wxR18nTWbCFB450jiiL5jnb5eeDTf4nPT0E6fBXtiqfI0ca1WdRO0yM2ToHSQLrVj5OdwKrSDBUOybSgHlFBVwC-6Jsq0s1P4BokXj5rPbMpAQ60u7qs2p' react-scripts start",
     "prebuild": "npm run verify-installation",
-    "build": "cross-env REACT_APP_PSPDFKIT_LICENSE_KEY='YOUR_LICENSE_KEY_GOES_HERE' react-scripts build",
+    "build": "cross-env REACT_APP_PSPDFKIT_LICENSE_KEY='gnrWLOvtLySXvx8KoQ12JF8MTH1-EuNewyCF2o6b9G5CfDhRUalgUOtHruCi1W2vd3tlz20xjsXHST7xEcfKT43N9MUqZ1hBpeKJ6fOh4qILTiX0GZXBiQYkfLHjH7fuxBxc1_8tzouCXNnUPiKSccOth7kHwQ1rKNoQHl_7pcyDT71JNUl_6MTO2U3QoC8ZbTEuBix65pxcj8CfsZcYwy7PCOdHWlM5qtCh6O40lz351K5UukeDYTUMkmWn_LerPF82L3mGbpTGi7_XqmxTB2ey8N9TK-RUCu6bfoBsEqwHyAHo2I98jHrq1Pn4pvxRZpvXfuYib0wxR18nTWbCFB450jiiL5jnb5eeDTf4nPT0E6fBXtiqfI0ca1WdRO0yM2ToHSQLrVj5OdwKrSDBUOybSgHlFBVwC-6Jsq0s1P4BokXj5rPbMpAQ60u7qs2p' react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
     "ncp": "^2.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

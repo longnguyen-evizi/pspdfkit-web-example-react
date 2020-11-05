@@ -37,14 +37,23 @@ class App extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      document: "example.pdf"
+      document: "example.pdf",
+      inputValue: "https://r360-media-production.s3.us-east-1.amazonaws.com/media/esign_documents/101/df673a109e6e1a98167c57e1c5b2e5f3"
     };
     this.openAnother = this.openAnother.bind(this);
+    this.updateInputValue = this.updateInputValue.bind(this);
   }
 
   openAnother() {
+    const {inputValue} = this.state;
     this.setState({
-      document: "another-example.pdf"
+      document: inputValue
+    });
+  }
+
+  updateInputValue(evt){
+    this.setState({
+      inputValue: evt.target.value
     });
   }
 
@@ -58,8 +67,9 @@ class App extends Component {
             baseUrl={baseUrl}
           />
         </div>
+        <input className="App-input" value={this.state.inputValue} onChange={this.updateInputValue}/>
         <button className="App-button" onClick={this.openAnother}>
-          Open another document
+          Open input document
         </button>
       </div>
     );
